@@ -1,0 +1,27 @@
+[package]
+name = "fast-find"
+version = "0.1.0"
+edition = "2021"
+description = "Parallel filesystem search with name, size, time and type filters that respects .gitignore."
+license = "MIT"
+
+[lib]
+name = "ff"
+
+[[bin]]
+name = "ff"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+ignore = "0.4"
+regex = "1"
+
+[dev-dependencies]
+tempfile = "3"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
