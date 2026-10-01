@@ -4,6 +4,8 @@
 
 **Status:** v0.1.0, working. Benchmarked against `fd` and GNU `find` below.
 
+![ff listing the Rust files over 12 KiB in three project folders, sorted](docs/images/search.png)
+
 ## Features
 
 - Parallel directory walk, with output buffered per thread so threads rarely contend on stdout.
